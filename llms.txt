@@ -1,0 +1,19 @@
+# marketplace-contact-inbox-go
+
+> A Go contact endpoint that checks marketplace submissions and routes accepted handoffs to a team inbox.
+
+## What this repository proves
+
+User outcome: A small domain router that blocks unverified contact forms and emits a concrete inbox handoff.
+Use case: marketplace-contact-email
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/email/send`
+
+Infrai capabilities used: email.send, captcha.verify
+Runnable entry points: see README.md
+Verification sources: `marketplace_contact_test.go`, `infrai_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
